@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Financial Information</title>
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="about.css">
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawDeptChart);
+	  google.charts.setOnLoadCallback(drawExpChart)
+	
+      function drawDeptChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Program', 'Funds Allocated'],
+          ['Show Choirs',     19000],
+          ['Marching Band',      15000],
+          ['HS Concert Bands',  4000],
+          ['Jazz Bands/Guitar', 2500],
+          ['Middle School',    2000],
+		  ['Vocal', 	5500],
+		  ['Strings',	500],
+		  ['Intermediate School',	500]
+        ]);
+
+        var options = {
+          title: 'LHS Allocation of Music Funds by Dept. 2016\n\n',
+		  titleTextStyle: {fontSize: 30},
+          pieHole: 0.4,			// ADD ANIMATIONS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+		  legend: 'labeled',
+		  pieStartAngle: 50,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('dept-donutchart'));
+        chart.draw(data, options);
+      }
+	
+	  function drawExpChart() {
+		  var data = google.visualization.arrayToDataTable([
+          ['Year', 'Fundraising',  'Spending'],
+          ['2015',  63445,    	   47315],
+          ['2016',  49000,   	   65500],
+          ['2017',  48000,    	   62000],
+        ]);
+
+        var options = {
+          title: 'LHS Music Boosters Fundraising vs. Spending\n\n',
+		  titleTextStyle: {fontSize: 30},
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('exp-curvechart'));
+        chart.draw(data, options);
+	  }
+	
+    </script>
+</head>
+
+<body>
+<div class="navbar-wrapper">
+  <div class="container">
+    <nav class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+          <a class="navbar-brand" href="#">Music Programs</a> </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li> <a href="index.html">Home</a> </li>
+            <li> <a href="about.html">About</a> </li>
+            <li class="active"> <a href="financials.html">Financials</a> </li>
+            <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">External Links<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li> <a href="http://www.pbs.org/parents/education/music-arts/the-benefits-of-music-education/">PBS - Benefits of Music Education</a> </li>
+                <li> <a href="http://www.nafme.org/">National Association of Music Education</a> </li>
+                <li> <a href="http://www.gallup.com/poll/8434/americans-want-music-students-play.aspx">Gallup Poll - Americans Want Students to Play On</a> </li>
+                <li> <a href="http://www.shsu.edu/academics/music/center-for-music-education/praxis/articles/earnhart_articulating-the-why.html">"Articulating the Why..." - Jeremy Earnhart</a></li>
+                <li> <a href="http://www.nationalshowchoirrankings.com/">National Show Choir Rankings 3/4/2017</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Loveland Music Program Websites</li>
+                <li> <a href="http://www.lovelandshowchoirs.org/">LHS Show Choirs</a> </li>
+                <li> <a href="http://lovelandhighschoolbands.weebly.com/">LHS Concert, Marching, & Jazz Bands</a></li>
+                <li> <a href="http://www.lovelandmusicboosters.org/">LHS Music Boosters</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<!-- HEADER --> 
+
+<!-- / HEADER --> 
+
+<!--  SECTION-1 -->
+<section>
+  <div class="row">
+    <div class="col-lg-12 page-header text-center">
+      <h2 class="about-us-header-text"><span class="small-caps-bigs">F</span><span class="small-caps-smalls">INANCIAL </span><span class="small-caps-bigs">I</span><span class="small-caps-smalls">NFORMATION </span></h2>
+    </div>
+  </div>
+  <div style="padding-top: 40px;" class="container">
+    <div class="row">
+      <div class="jumbotron container-fluid">
+        <h1 style="font-size: 42px;">State Funds Allocated For Music: <span style="color: #B70003">$0.00</span> <span style="font-size: 38px;">/year</span></h1>
+      </div>
+      <div class="jumbotron">
+        <h1 style="font-size: 42px;">Loveland Music Boosters Fundraisers in 2016: <span style="color: #000000">$49,000</span></h1>
+      </div>
+      <style>
+		
+		  p {
+			  font-size: 22px;
+			  margin-top: 24px;
+		  }
+		  
+		</style>
+      <p><br/>
+        The Loveland City School District has only one primary source of income to support its music programs: the <a href="http://www.lovelandmusicboosters.com/">Loveland Music Boosters</a>. This non-profit 501(c)(3) organization is in charge of fundraising and providing financial support and assistance for the Loveland City School District music programs.</p>
+      <p>While the Loveland Music Boosters need over $60,000 per year to accomplish their goal, <b>the state provides none of this</b>, forcing them to organize and run their own fundraisers every year. If the state provided even half of this number, the parents and teachers involved in the Boosters could dedicate this time and effort to the music programs themselves.</p>
+    </div>
+    <hr class="featurette-divider"/>
+    <div class="row">
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <div id="exp-curvechart" style="padding-left: 30px; width: 1150px; height: 700px;"> </div>
+      </div>
+      <p>The graph above highlights the dramatic decrease in funds raised in fundraisers, as well as the increse in required expenses for the school's music programs. Over 37% of Loveland High School's student body is involved in music, and this number is only increasing. The funding and number of programs we have now is barely enough to maintain the demand caused by the large influx of students into the various ensembles.</p>
+      <p>The school has a limited pool of instruments, uniforms, and equipment available to students. As these age, they need to be repaired or replaced, however, LHS has limited funds and availability to allocate to repairs and replacements because of the shortage in funding. </p>
+    </div>
+    <hr class="featurette-divider"/>
+    <div class="row">
+      <div id="dept-donutchart" style="position: relative; z-index: 10; width: auto; height: 800px;"></div>
+      <p style="position: relative; z-index: 999; margin-top: -70px;">Loveland High School has a wide variety of music ensembles, drastically ranging in size and prominence. The Loveland Show Choirs recieve a whopping 38.8% of our school's music funding-- around $20,000 per year. By contrast, the Loveland Intermediate School is only allocated under 1% of the budget. If the Loveland School District recieved funding from the State of Ohio to support its music programs, it could offer the same opportunities and support to all of its ensembles.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER --> 
+<br/>
+<br/>
+<hr class="featurette-divider"/>
+<footer>
+  <div class="footer" id="footer" style="margin-left: 200px; text-align: left;">
+    <p style="font-size: 18px;">Financial information on this site provided courtesy of Mrs. Andrea Kiehl&ndash; President, Loveland Music Boosters.</p>
+    <p style="font-size: 12px;"> &copy; 2017 Radu Vasilescu, Claudia Bow, Shannon Symons.</p>
+  </div>
+</footer>
+
+<!-- / FOOTER --> 
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="../js/jquery-1.11.3.min.js"></script> 
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="../js/bootstrap.js"></script>
+</body>
+</html>
